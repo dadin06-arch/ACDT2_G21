@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>듀얼 티처블 머신 프로젝트</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>티처블 머신 듀얼 분류기</h1>
+        <p>웹캠을 시작하고, 아래 버튼을 눌러 원하는 모델의 결과를 확인하세요.</p>
+    </header>
+
+    <div id="main-content">
+        <section id="camera-feed">
+            <h2>웹캠 피드</h2>
+            <div id="webcam-container"></div>
+            <button id="start-button">🚀 웹캠 및 모델 시작</button>
+        </section>
+
+        <section id="controls">
+            <h2>모델 선택</h2>
+            <p id="current-model-info">현재 활성화된 모델: **아직 로드되지 않음**</p>
+            <button id="model1-btn" class="model-select-btn">모델 1 결과 보기</button>
+            <button id="model2-btn" class="model-select-btn">모델 2 결과 보기</button>
+        </section>
+
+        <section id="results">
+            <h2>실시간 분류 결과</h2>
+            <div id="label-container">로드 대기 중...</div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

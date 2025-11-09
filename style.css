@@ -1,0 +1,81 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    min-width: 300px;
+}
+
+/* 버튼 스타일 */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.model-select-btn {
+    background-color: #FFA500; /* 주황색 */
+}
+
+.model-select-btn.active {
+    background-color: #E60073; /* 활성화된 버튼 색상 */
+    font-weight: bold;
+}
+
+/* 웹캠 및 결과 영역 */
+#webcam-container {
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    display: inline-block;
+}
+
+#label-container {
+    margin-top: 15px;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.prediction-item {
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+}
+.prediction-item:last-child {
+    border-bottom: none;
+}
