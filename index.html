@@ -19,54 +19,50 @@
     <header>
         <div class="header-content-wrapper"> 
             <div class="header-icons-left">
-                <img src="images/icon_face_type.png" alt="Face type Icon" class="header-icon">
-                <img src="images/icon_palette.png" alt="Palette Icon" class="header-icon">
+                <span style="font-size: 1.5em;">✨</span>
             </div>
-            <div class="header-text-group">
-                <h1>AI StyleMate</h1>
-                <p class="subtitle">Hair Style and Color Recommendation based on Face Type and Personal Tone</p>
-            </div>
+            <h1>AI StyleMate: 얼굴형 & 퍼스널 톤 분석</h1>
             <div class="header-icons-right">
-                <img src="images/icon_comb.png" alt="Comb Icon" class="header-icon">
-                <img src="images/icon_face_scan.png" alt="Face Scan Icon" class="header-icon">
+                <span style="font-size: 1.5em;">Hanyang Univ. Project</span>
             </div>
         </div>
     </header>
 
-    <div id="main-content">
-        <section id="input-section" class="card fade-in">
+    <div class="container">
+        
+        <section id="input-area" class="card fade-in">
             <h2><i class="fas fa-camera"></i> Input Source</h2>
             
-            <div class="mode-select-group">
-                <button id="mode-webcam" class="btn mode-btn active">Webcam Mode</button>
+            <div class="button-group">
+                <button id="mode-webcam" class="btn mode-btn">Webcam Live Mode</button>
                 <button id="mode-upload" class="btn mode-btn">Image Upload Mode</button>
             </div>
 
             <div id="webcam-container">
-                <p id="initial-message">Click "Start Analysis" to load webcam.</p>
+                <p id="initial-message">분석을 시작하려면 모드를 선택해 주세요.</p>
             </div>
             
-            <div id="webcam-controls">
+            <div id="webcam-controls" style="display: none;">
                 <button id="start-button" class="btn primary-btn">🚀 Start Analysis</button>
             </div>
 
             <div id="upload-controls" style="display: none;">
                 <input type="file" id="image-upload" accept="image/*" class="file-input">
-                <button id="process-image-btn" class="btn primary-btn" disabled>Process Uploaded Image</button>
+                <button id="process-image-btn" class="btn primary-btn" disabled>Upload and Process Image</button>
             </div>
         </section>
 
         <section id="controls" class="card fade-in">
-            <h2><i class="fas fa-magic"></i> Model Selection</h2>
+            <h2><i class="fas fa-magic"></i> Model Selection & Manual Input</h2>
             <p id="current-model-info">Active Model: **Not yet loaded**</p>
             <div class="button-group">
-                <button id="model1-btn" class="btn model-select-btn">Face Type Analysis</button>
-                <button id="model2-btn" class="btn model-select-btn">Personal Tone Analysis</button>
+                <button id="model1-btn" class="btn model-select-btn">Face Type Analysis (얼굴형)</button>
+                <button id="model2-btn" class="btn model-select-btn">Personal Tone Analysis (퍼스널 톤)</button>
             </div>
             
-            <div id="style-selection-controls" style="display: none;">
-                <h3><i class="fas fa-scissors"></i> Hair Style Guide</h3>
-                <p>Select a face type to view recommendations.</p>
+            <div id="face-selection-controls" style="display: none;">
+                <h3><i class="fas fa-user"></i> Face Type Guide (수동 선택)</h3>
+                <p>결과가 불분명할 경우 직접 선택하여 추천을 확인하세요.</p>
                 <div class="face-type-buttons button-group">
                     <button class="btn face-select-btn" data-facetype="Oval">Oval</button>
                     <button class="btn face-select-btn" data-facetype="Round">Round</button>
@@ -77,8 +73,8 @@
             </div>
 
             <div id="tone-selection-controls" style="display: none;">
-                <h3><i class="fas fa-palette"></i> Personal Tone Guide</h3>
-                <p>Select a tone to view color recommendations.</p>
+                <h3><i class="fas fa-palette"></i> Personal Tone Guide (수동 선택)</h3>
+                <p>결과가 불분명할 경우 직접 선택하여 추천을 확인하세요.</p>
                 <div class="tone-type-buttons button-group">
                     <button class="btn tone-select-btn" data-tonetype="Cool">Cool Tone</button>
                     <button class="btn tone-select-btn" data-tonetype="Warm">Warm Tone</button>
@@ -102,8 +98,7 @@
             
         </section>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
-
 </html>
